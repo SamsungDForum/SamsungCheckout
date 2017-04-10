@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Samsung Checkout Sample</title>
+	
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=1920'>
+	    
+	    <link rel='stylesheet' type='text/css' href='./style.css'/>
+	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	    <script src="lib/CryptoJS/3.1.2/rollups/hmac-sha256.js"></script>
+  		<script src="lib/CryptoJS/3.1.2/rollups/aes.js"></script>
+	    <script type="text/javascript" src="$WEBAPIS/webapis/webapis.js"></script>
+	    <script type='text/javascript' src='./main.js'></script>
+	    <script type='text/javascript' src='./checkout.js'></script>
+	</head>
+	<body onload='main()' onkeydown='handleKeydown(event);'> 
+		<header>
+			<h1>Samsung Checkout Sample</h1>
+			<h3>This sample describes how you can implement billing system on your application. Please click each buttons.</h3>
+			<h4><br>At the first time, call "initialization".<br>Please note that this sample application is only implemented to be able to test "DUMMY" server.<br>If you want to use "DEV" or "PRD" server, please replace your information issued by DPI Portal in this sample. (appId, securityKey)<br><br>[Key Manual]<br>DUMMY(ArrowLeft) DEV(ArrowUp) PRD(ArrowRight)<br>initialization(1) requestPurchasesList(2) requestProductsList(3) requestVerifyPurchase(4) requestApplyProduct(5) requestCancelSubscription(6) requestBuyItem(7) clear Log(0)</h4>
+			<nav>
+				<span>Select DPI Server : </span>
+				<span id='selected_server'>DUMMY</span>
+				<div>
+					<button id='DUMMY'>DUMMY</button>
+					<button id='DEV'>DEV</button>
+					<button id='PRD'>PRD</button>
+				</div>
+			</nav>
+		</header>
+		<section>
+			<table>
+				<thead>
+					<tr>
+						<th>Function</th>
+						<th>Play action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>initialization</td>
+						<td><button onclick='initialization()'>initialization</button></td>
+					</tr>
+					<tr>
+						<td>requestPurchasesList</td>
+						<td><button onclick='requestPurchasesList()'>requestPurchasesList</button></td>
+					</tr>
+					<tr>
+						<td>requestProductsList</td>
+						<td><button onclick='requestProductsList()'>requestProductsList</button></td>
+					</tr>
+					<tr>
+						<td>requestVerifyPurchase</td>
+						<td><button onclick='requestVerifyPurchase()'>requestVerifyPurchase</button></td>
+					</tr>
+					<tr>
+						<td>requestApplyProduct</td>
+						<td><button onclick='requestApplyProduct()'>requestApplyProduct</button></td>
+					</tr>
+					<tr>
+						<td>requestCancelSubscription</td>
+						<td><button onclick='requestCancelSubscription()'>requestCancelSubscription</button></td>
+					</tr>
+					<tr>
+						<td>requestBuyItem</td>
+						<td><button onclick='requestBuyItem()'>requestBuyItem</button></td>
+					</tr>
+					<tr>
+						<td>clear Log</td>
+						<td><button onclick='clearLog()'>clear Log</button></td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>Result</h2>
+			<div id='result'></div>
+		</section>
+		<footer>
+			<p>All contents copyright &copy; Samsung Electronics Co., Ltd.</p>
+		</footer>
+	</body>
+</html>
