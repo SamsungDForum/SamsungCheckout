@@ -6,9 +6,9 @@ var widgetName = "SamsungCheckout";
 var loginUid = "";
 
 var serverDpiUrlList = {
-	'DUMMY': 'https://sbox-dpiapi.samsungcloudsolution.com/openapi',
-	'DEV': 'https://sbox-dpiapi.samsungcloudsolution.com/openapi',
-	'PRD': 'https://dpiapi.samsungcloudsolution.com/openapi'
+	'DUMMY': 'https://sbox-checkoutapi.samsungcheckout.com/openapi',
+	'DEV': 'https://sbox-checkoutapi.samsungcheckout.com/openapi',
+	'PRD': 'https://checkoutapi.samsungcheckout.com/openapi'
 };
 
 // securityKey issued by DPI Portal
