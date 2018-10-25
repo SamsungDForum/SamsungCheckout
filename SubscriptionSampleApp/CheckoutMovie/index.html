@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Samsung Checkout Sample</title>
+	
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=1920'>
+	    
+	    <link rel='stylesheet' type='text/css' href='./css/style.css'/>
+	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	    <script src="lib/CryptoJS/3.1.2/rollups/hmac-sha256.js"></script>
+  		<script src="lib/CryptoJS/3.1.2/rollups/aes.js"></script>
+
+ 	    <script type="text/javascript" src="$WEBAPIS/webapis/webapis.js"></script> 
+	    <script type='text/javascript' src='js/main.js'></script>
+	    <script type='text/javascript' src='js/checkout.js'></script>
+	</head>
+	<body onload='main()' onkeydown='handleKeydown(event);'> 
+		<header>
+			<h1 style="text-align:center">Subscription integration example app</h1>
+		</header>
+		<section>
+		<nav>
+		<h2>Step</h2>
+		<img style="width:100%;"/>
+		<h3>Note</h3>
+		If you are testing with the samsung account that already subscribed the item of this example app, you can't test "subscription full scenario".
+        <br>If you want to test the full scenario, please test with another samsung account that did not activate silver membership of this example app.
+
+		</nav>
+		
+		<div style="background-image: linear-gradient(to bottom right,skyblue, white,white,white, white,white,skyblue);height:300px;padding-left: 165px;">
+		    <div style="width:35%;height:100%;display: inline-block;">
+		        <h2 id="title" style="
+		    color: darkred;
+		    padding: 0px;
+		    margin: 20px;
+		">Enjoy UG! with Silver Membership!</h2>
+		        <p id='content1' style="
+		    margin: 20px;
+		    font-size: 17px;
+		">Watch your favorite shows instantly,all commercial free</p>
+		        <p id='content2' style="
+		    margin: 20px;
+		    font-size: 17px;
+		">Only $0.79 a month</p>
+		        <button id="subscriptionStatus" style="
+		    background-color: #16a7a7;
+		    margin-left: 20px;
+		    padding: 15px;
+		    font-size: 15px;
+		    color: white;
+		    border: 0px;
+		">Your Membership is not activated</button>
+		    </div>
+			<div style="width: 64%;height:100%;display: inline-block;">
+		        <img src="images/ug.png" style="/* width:100% */height: 88%;margin: 16px;">
+		    </div>
+	    </div>
+
+			<table>
+				<tr>
+				<td>
+					<div id="guide">
+						This is guide. let's check user's subscription status. Please press 1 button.
+					</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
+							<h2>Result (You can scroll by using up and down button of tv remotecontroller)</h2>
+			<div id='result' style="word-break:break-all; word-wrap:break-word;overflow:auto;overflow-y:scroll;">
+			</div>				
+				</td>
+
+				</tr>
+			</table>
+		</section>
+		<footer>
+			<p>All contents copyright &copy; Samsung Electronics Co., Ltd.</p>
+		</footer>
+	</body>
+</html>

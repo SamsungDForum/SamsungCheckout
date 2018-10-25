@@ -1,0 +1,110 @@
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body {
+	background-color: #ccffcc;
+}
+
+<!-- page layout -->
+header {
+	width: 100%;
+	height: 15%;
+	padding: 20px;
+}
+
+section {
+	width: 100%;
+	height: 80%;
+	padding: 20px;
+}
+
+footer {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	height: 5%;
+}
+
+h1 {
+	padding: 20px;
+	font-size: 50px;
+}
+
+h2 {
+	padding-top: 20px;
+	font-size: 30px;
+}
+
+h3 {
+	padding-left: 20px;
+	font-size: 20px;
+}
+
+h4 {
+	padding-left: 20px;
+	font-size: 17px;
+}
+
+nav {
+    float: left;
+    width: 30%;
+    height: 752px; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+}
+
+table {
+	width: 67%;
+	float: left;
+	display: table;
+	table-layout:fixed;
+	overflow:auto;
+	word-break:break-all;
+}
+
+tr {
+	text-align: center;
+}
+
+th {
+	font-size: 30px;
+}
+
+td{
+	font-size: 25px;
+	text-align: left;
+	outline: 1px solid gray;
+}
+
+td button {
+	width: 100%;
+	font-size: 25px;
+	background-color: white;
+	cursor: pointer;
+}
+
+td button:HOVER {
+	background-color: #7d7c7d;
+}
+
+td button:ACTIVE {
+	background-color: #7d7c7d;
+}
+
+#result {
+	height: 400px;
+	overflow-y: scroll;
+}
+
+footer p {
+	text-align: right;
+	padding: 20px;
+}
+
+.selectedLi
+{
+	background-color: yellow;
+}
